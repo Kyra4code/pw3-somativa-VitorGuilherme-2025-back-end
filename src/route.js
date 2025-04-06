@@ -1,8 +1,8 @@
-import express from "express";
-import tbl_user from "./controller/tbl_user.js";
+const express = require("express");
+const tbl_user = require("./controller/tbl_user.js");
 
-const route = express();
+const routes = express();
 
-route.use("/user", tbl_user);
+routes.use("/user", tbl_user);
 
-export default route;
+module.exports = routes;

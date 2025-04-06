@@ -4,7 +4,7 @@
   "description": "Api back-end do web site montador times pokemon",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "author": "Kyra4code",
   "license": "ISC",

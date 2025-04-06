@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require("express");
 // import cors from "cors";
-import route from './route.js';
+const routes = require("./route.js");
 
 const server = express();
 
@@ -12,4 +12,4 @@ server.listen(9000,()=>{
     console.log("Open")
 })
 
-server.use("/", route);
+server.use("/", routes);
