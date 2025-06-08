@@ -1,5 +1,5 @@
 const express = require("express");
-const {createUser, loginUser} = require( "../service/tbl.user.js");
+const {createUser, selectUser} = require( "../service/tbl_user.js");
 
 const route = express.Router();
 
@@ -24,7 +24,7 @@ route.post("/login", async (request, response) => {
     console.log("Dados chegaram com sucesso!");
 
     try{
-        const info = await loginUser(email, password);
+        const info = await selectUser(email, password);
 
         if(!info){
             return response.status(401).json({ message: "Email ou senha inválidos!" });
